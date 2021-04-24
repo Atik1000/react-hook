@@ -1,12 +1,17 @@
-import React from 'react';
+import React from "react";
 import "./App.css";
-import DataFeching from './components/UseEffect/DataFeching';
-
+import ComponentC from "./components/UseContext/ComponentC";
+export const UserContext = React.createContext();
+export const ChannelContext = React.createContext();
 
 const App = () => {
   return (
     <div className="App">
-<DataFeching/>
+      <UserContext.Provider value={"Atik"}>
+        <ChannelContext.Provider value={'21'}>
+          <ComponentC />
+        </ChannelContext.Provider>
+      </UserContext.Provider>
     </div>
   );
 };
