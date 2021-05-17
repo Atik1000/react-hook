@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-import ComponentC from "./components/UseContext/ComponentC";
-export const UserContext = React.createContext();
-export const ChannelContext = React.createContext();
+import CountCounrter from "./CountCounrter";
+import CountFunction from "./CountFunction";
+import TestCount from "./useReducer/text";
+
+
 
 const App = () => {
+  const [count,setCount]=useState()
   return (
     <div className="App">
-      <UserContext.Provider value={"Atik"}>
-        <ChannelContext.Provider value={'21'}>
-          <ComponentC />
-        </ChannelContext.Provider>
-      </UserContext.Provider>
+      {/* <TestCount/> */}
+      <CountCounrter count={count}/>
+      <CountFunction setCount={setCount}/>
+
     </div>
   );
 };

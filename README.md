@@ -1,2 +1,8 @@
-<!-- Summary of useContext hook -->
-1.Context provides a way to pass data through the components tree without having to pass props down manually at every level
+<!-- summaray of useReducer -->
+1.useReducer is a hook that is used for state management 
+<br/>
+2.useReducer is related to reducer function
+<br/>
+3.useReducer (reducer,iitialState)
+<br/>
+4.reducer(currentState,action)
